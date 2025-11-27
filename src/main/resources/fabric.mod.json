@@ -1,17 +1,16 @@
 {
 	"schemaVersion": 1,
-	"id": "fortunecookies",
+	"id": "luckyducks_fortunecookies",
 	"version": "${version}",
-	"name": "fortunecookies",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Lucky Duck's Fortune Cookies",
+	"description": "Unlike other fortune cookie mods that totally exist (?), our Lucky Duck's Fortune Cookies™ are authentic and based on real fortunes from fortune cookies because the artist eats too much take-out!",
 	"authors": [
-		"Me!"
+		"Salad",
+        "GooberExe"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "All rights reserved",
 	"icon": "assets/fortunecookies/icon.png",
 	"environment": "*",
 	"entrypoints": {

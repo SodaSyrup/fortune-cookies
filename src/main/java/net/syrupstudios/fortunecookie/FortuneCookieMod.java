@@ -11,7 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class FortuneCookieMod implements ModInitializer {
-    public static final String MOD_ID = "fortunecookie";
+    public static final String MOD_ID = "luckyducks_fortunecookies";
 
     public static final Item FORTUNE_COOKIE = new FortuneCookieItem(
             new FabricItemSettings()
