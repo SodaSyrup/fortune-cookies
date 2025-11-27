@@ -24,7 +24,7 @@ public class FortuneScreen extends Screen {
         int x = (this.width - PANEL_WIDTH) / 2;
         int y = (this.height - PANEL_HEIGHT) / 2;
 
-        this.addDrawableChild(ButtonWidget.builder(Text.literal("Ok thank you"), button -> {
+        this.addDrawableChild(ButtonWidget.builder(Text.literal("Ok thanks!"), button -> {
             this.close();
         }).dimensions(x + PANEL_WIDTH / 2 - 75, y + PANEL_HEIGHT - 35, 150, 20).build());
     }
