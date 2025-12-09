@@ -23,9 +23,9 @@ public class FortuneManager {
     // Default fortunes
     private static final List<Fortune> DEFAULT_FORTUNES =
             List.of(
-                    new Fortune("If money really changes everything, then maybe you should try changing the money.", 1),
-                    new Fortune("There is more to life than just money, there's Bitcoin.", 0),
-                    new Fortune("You dont become a failure until you're satisfied with being one.", -1)
+                new Fortune("If money really changes everything, then maybe you should try changing the money.", 1),
+                new Fortune("There is more to life than just money, there's Bitcoin.", 0),
+                new Fortune("You dont become a failure until you're satisfied with being one.", -1)
             );
 
     public static void initialize() {
