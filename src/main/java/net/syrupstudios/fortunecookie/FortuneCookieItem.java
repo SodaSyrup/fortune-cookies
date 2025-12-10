@@ -27,26 +27,16 @@ public class FortuneCookieItem extends Item {
             if (!player.getInventory().insertStack(fortunePaper)) {
                 player.dropItem(fortunePaper, false);
             }
-
-            player.addStatusEffect(determineStatusEffect(fortune.getAura()));
+            //determines whether fortune is positive or not, and adds effect accordingly
+            player.addStatusEffect(
+                    fortune.isPositive()
+                            ? new StatusEffectInstance(StatusEffects.LUCK, 6000, 2)
+                            : new StatusEffectInstance(StatusEffects.UNLUCK, 1000, 0));
 
             // Send packet to client to open UI
             FortunePacketHandler.sendFortuneToClient(player, fortune.getFortuneValue());
         }
 
         return result;
-    }
-
-    private StatusEffectInstance determineStatusEffect(int aura) {
-        //negative aura check
-        if (aura < 0) {
-            return new StatusEffectInstance(StatusEffects.UNLUCK, 1000, 0);
-        }
-        //neutral aura check
-        else if (aura == 0) {
-            return new StatusEffectInstance(StatusEffects.GLOWING, 500, 0);
-        }
-        //if neither checks hit assumes positive aura
-        return new StatusEffectInstance(StatusEffects.LUCK, 6000, 2);
     }
 }
