@@ -11,7 +11,7 @@
 	"contact": {
 	},
 	"license": "All rights reserved",
-	"icon": "assets/fortunecookies/icon.png",
+	"icon": "assets/luckyducks_fortunecookies/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
