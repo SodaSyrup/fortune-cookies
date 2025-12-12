@@ -2,15 +2,15 @@ package net.syrupstudios.fortunecookie;
 
 public class Fortune {
     private final String fortune;
-    private final Boolean isPositive; //if true gives luck, if it is false gives bad luck
+    private final LuckEffect luckEffect; //if true gives luck, if it is false gives bad luck
 
-    public Fortune(String fortuneValue, Boolean isPositive) {
+    public Fortune(String fortuneValue, LuckEffect luckEffect) {
         this.fortune = fortuneValue;
-        this.isPositive = isPositive;
+        this.luckEffect = luckEffect;
     }
 
-    public Boolean isPositive() {
-        return isPositive;
+    public LuckEffect getLuckEffect() {
+        return luckEffect;
     }
 
     public String getFortuneValue() {

@@ -2,7 +2,6 @@ package net.syrupstudios.fortunecookie;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -27,11 +26,8 @@ public class FortuneCookieItem extends Item {
             if (!player.getInventory().insertStack(fortunePaper)) {
                 player.dropItem(fortunePaper, false);
             }
-            //determines whether fortune is positive or not, and adds effect accordingly
-            player.addStatusEffect(
-                    fortune.isPositive()
-                            ? new StatusEffectInstance(StatusEffects.LUCK, 6000, 2)
-                            : new StatusEffectInstance(StatusEffects.UNLUCK, 1000, 0));
+            //Calls FortuneManager and gets random status effect dependent on status
+            player.addStatusEffect(new StatusEffectInstance(FortuneManager.getFortuneStatusEffect(fortune), 665, 0));
 
             // Send packet to client to open UI
             FortunePacketHandler.sendFortuneToClient(player, fortune.getFortuneValue());
