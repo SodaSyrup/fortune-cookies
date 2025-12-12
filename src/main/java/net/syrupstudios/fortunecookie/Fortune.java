@@ -1,19 +1,19 @@
 package net.syrupstudios.fortunecookie;
 
 public class Fortune {
-    private final String fortuneValue;
-    private final int aura; //less than 0 corresponds to negative aura, 0 = neutral, greater than 0 is positive aura
+    private final String fortune;
+    private final LuckEffect luckEffect; //if true gives luck, if it is false gives bad luck
 
-    public Fortune(String fortuneValue, int aura) {
-        this.fortuneValue = fortuneValue;
-        this.aura = aura;
+    public Fortune(String fortuneValue, LuckEffect luckEffect) {
+        this.fortune = fortuneValue;
+        this.luckEffect = luckEffect;
     }
 
-    public int getAura() {
-        return aura;
+    public LuckEffect getLuckEffect() {
+        return luckEffect;
     }
 
     public String getFortuneValue() {
-        return fortuneValue;
+        return fortune;
     }
 }

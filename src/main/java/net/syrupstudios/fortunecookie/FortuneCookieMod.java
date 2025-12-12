@@ -1,5 +1,6 @@
 package net.syrupstudios.fortunecookie;
 
+import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -27,6 +28,9 @@ public class FortuneCookieMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        MidnightConfig.init(FortuneCookieMod.MOD_ID, FortuneConfig.class);
+        //populating Fortunes
+        FortuneManager.initialize();
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "fortune_cookie"), FORTUNE_COOKIE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "fortune_paper"), FORTUNE_PAPER);
 
@@ -37,7 +41,5 @@ public class FortuneCookieMod implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
             content.add(FORTUNE_PAPER);
         });
-
-        FortuneManager.initialize();
     }
 }
