@@ -1,7 +1,6 @@
 package net.syrupstudios.fortunecookie;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -17,22 +16,12 @@ public class FortuneCookieItem extends Item {
         ItemStack result = super.finishUsing(stack, world, user);
 
         if (!world.isClient && user instanceof ServerPlayerEntity player) {
-            Fortune fortune = FortuneManager.getRandomFortune();
-
             // Give fortune paper to player
             ItemStack fortunePaper = new ItemStack(FortuneCookieMod.FORTUNE_PAPER);
-            FortunePaperItem.setFortune(fortunePaper, fortune.getFortuneValue());
-
             if (!player.getInventory().insertStack(fortunePaper)) {
                 player.dropItem(fortunePaper, false);
             }
-            //Calls FortuneManager and gets random status effect dependent on status
-            player.addStatusEffect(new StatusEffectInstance(FortuneManager.getFortuneStatusEffect(fortune), 665, 0));
-
-            // Send packet to client to open UI
-            FortunePacketHandler.sendFortuneToClient(player, fortune.getFortuneValue());
         }
-
         return result;
     }
 }
