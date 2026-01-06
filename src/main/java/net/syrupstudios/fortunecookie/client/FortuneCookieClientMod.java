@@ -4,6 +4,7 @@ import net.syrupstudios.fortunecookie.FortunePacketHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.MinecraftClient;
+import net.syrupstudios.fortunecookie.data.FortuneScreen;
 
 public class FortuneCookieClientMod implements ClientModInitializer {
     @Override

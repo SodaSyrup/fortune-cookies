@@ -3,6 +3,9 @@ package net.syrupstudios.fortunecookie;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
+import net.syrupstudios.fortunecookie.config.FortuneConfig;
+import net.syrupstudios.fortunecookie.data.Fortune;
+import net.syrupstudios.fortunecookie.data.LuckEffect;
 
 import java.util.ArrayList;
 import java.util.List;
