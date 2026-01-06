@@ -10,6 +10,9 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.syrupstudios.fortunecookie.config.FortuneConfig;
+import net.syrupstudios.fortunecookie.data.FortuneCookieItem;
+import net.syrupstudios.fortunecookie.data.FortunePaperItem;
 
 public class FortuneCookieMod implements ModInitializer {
     public static final String MOD_ID = "luckyducks_fortunecookies";
@@ -19,6 +22,7 @@ public class FortuneCookieMod implements ModInitializer {
                     .food(new FoodComponent.Builder()
                             .hunger(2)
                             .saturationModifier(0.3f)
+                            .alwaysEdible()
                             .build())
     );
 

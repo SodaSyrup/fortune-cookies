@@ -1,10 +1,11 @@
-package net.syrupstudios.fortunecookie;
+package net.syrupstudios.fortunecookie.data;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
+import net.syrupstudios.fortunecookie.FortuneCookieMod;
 
 public class FortuneCookieItem extends Item {
     public FortuneCookieItem(Settings settings) {

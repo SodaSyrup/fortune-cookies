@@ -1,4 +1,4 @@
-package net.syrupstudios.fortunecookie;
+package net.syrupstudios.fortunecookie.config;
 
 import eu.midnightdust.lib.config.MidnightConfig;
 

@@ -1,4 +1,4 @@
-package net.syrupstudios.fortunecookie.client;
+package net.syrupstudios.fortunecookie.data;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;

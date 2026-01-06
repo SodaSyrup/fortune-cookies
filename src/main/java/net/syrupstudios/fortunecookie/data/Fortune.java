@@ -1,4 +1,4 @@
-package net.syrupstudios.fortunecookie;
+package net.syrupstudios.fortunecookie.data;
 
 public class Fortune {
     private final String fortune;
